@@ -1,11 +1,21 @@
+@import "Color.css"; 
+@import "Home-style.css";
+
 body {
-  background-color: lightgrey;
+  background-color: var(--color-background);
 }
 
 nav, .nav{
   display: flex;
   justify-content: space-evenly;
   align-content: center;
-  background-color: teal;
+  background-color: var(--color-background);
   
+}
+.nav a{
+  cursor: default;
+}
+
+h1 {
+  color: var(--color-contrast);
 }
