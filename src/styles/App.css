@@ -1,8 +1,10 @@
 @import "Color.css"; 
 @import "Home-style.css";
+/* @import "media-query.css"; */
 
 body {
   background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 nav, .nav{
@@ -19,3 +21,4 @@ nav, .nav{
 h1 {
   color: var(--color-contrast);
 }
+

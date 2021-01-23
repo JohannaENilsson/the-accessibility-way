@@ -6,3 +6,12 @@ html {
     --color-complement: #64616A;
     --color-contrast: #283046;
   }
+
+  html.dark {
+    --color-text: #EDE6E4;
+    --color-background: black;
+    --color-primary: #A49B9A;
+    --color-secondary: #283046;
+    --color-complement: #64616A;
+    --color-contrast: #D4CAC6;
+  }
