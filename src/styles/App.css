@@ -22,3 +22,10 @@ h1 {
   color: var(--color-contrast);
 }
 
+
+img {
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-contrast2);
+  object-fit: cover;
+}

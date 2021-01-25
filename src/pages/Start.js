@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Start = () => {
   return (
     <main id="start">
       <h1>
@@ -15,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Start;

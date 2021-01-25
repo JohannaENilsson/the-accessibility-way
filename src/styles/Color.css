@@ -5,6 +5,7 @@ html {
     --color-secondary: #D4CAC6;
     --color-complement: #64616A;
     --color-contrast: #283046;
+    --color-contrast2:#1da3a8;
   }
 
   html.dark {
@@ -14,4 +15,5 @@ html {
     --color-secondary: #283046;
     --color-complement: #64616A;
     --color-contrast: #D4CAC6;
+    --color-contrast2:#1da3a8;
   }
