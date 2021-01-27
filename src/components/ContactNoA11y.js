@@ -1,9 +1,9 @@
-import NavigationWithA11y from "./NavigationWithA11y";
+import NavigationNoA11y from "./NavigationNoA11y";
 
 const ContactNoA11y = () => {
   return (
     <div>
-      <NavigationWithA11y />
+      <NavigationNoA11y />
       <form>
         <p>Contact</p>
       </form>

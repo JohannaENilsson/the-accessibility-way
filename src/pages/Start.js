@@ -1,9 +1,8 @@
-import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const Start = () => {
   return (
-    <main id="start">
+    <main id="start" className="centerColumn">
       <h1>
         Chose if you want to see the components with or without accessibility
       </h1>

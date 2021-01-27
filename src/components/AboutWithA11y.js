@@ -1,16 +1,15 @@
-import NavigationWithA11y from "./NavigationWithA11y";
+import HeaderWithA11y from "./HeaderWithA11y";
 
 const AboutWithA11y = () => {
   return (
     <>
-      <header>
-        <NavigationWithA11y />
-      </header>
-      <main>
-        <h1>
+      <HeaderWithA11y headerText={"About with A11Y"} />
+
+      <main className="centerColumn">
+        <h2>
           You know when grown-ups tell you 'everything's going to be fine' and
           you think they're probably lying to make you feel better?
-        </h1>
+        </h2>
         <p>
           Heh-haa! Super squeaky bum time! I'm nobody's taxi service; I'm not
           gonna be there to catch you every time you feel like jumping out of a

@@ -6,6 +6,8 @@ html {
     --color-complement: #64616A;
     --color-contrast: #283046;
     --color-contrast2:#1da3a8;
+    --color-warning: red;
+    
   }
 
   html.dark {
@@ -16,4 +18,5 @@ html {
     --color-complement: #64616A;
     --color-contrast: #D4CAC6;
     --color-contrast2:#1da3a8;
+    --color-warning: red;
   }
