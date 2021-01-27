@@ -12,12 +12,9 @@
 
 #start a {
     background-color: var(--color-primary);
-    display: block;
     width: 150px;
     line-height: 100px;
-    text-align: center;
-    border-radius: 10px;
-    
+    height: 100px;
 }
 
 #start nav {

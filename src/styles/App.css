@@ -19,6 +19,19 @@ nav, .nav{
 .nav a{
   cursor: default;
 }
+
+a {
+  color: var(--color-contrast);
+  text-decoration: none;
+  border-radius: 10px;
+  height: 50px;
+  line-height: 50px;
+  width: 80px;
+  text-align: center;
+}
+.active {
+  background-color: var(--color-contrast2);
+}
 .centerColumn {
   display: flex;
   flex-direction: column;
@@ -44,10 +57,7 @@ h1 {
   color: var(--color-contrast);
 }
 
-section {
-  /* background-color: white;
-  margin: 5px 0; */
-}
+
 
 
 img, iframe {
