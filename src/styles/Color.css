@@ -1,10 +1,10 @@
 html {
     --color-text: black;
-    --color-background: #EDE6E4;
+    --color-background: #EDE6E4; /*--> bra */
     --color-primary: #A49B9A;
     --color-secondary: #D4CAC6;
     --color-complement: #64616A;
-    --color-contrast: #283046;
+    --color-contrast: #141822; /*--> bra */
     --color-contrast2:#1da3a8;
     --color-warning: red;
     
@@ -12,11 +12,11 @@ html {
 
   html.dark {
     --color-text: #EDE6E4;
-    --color-background: black;
+    --color-background: #141822; /*--> bra */
     --color-primary: #A49B9A;
     --color-secondary: #283046;
     --color-complement: #64616A;
-    --color-contrast: #D4CAC6;
+    --color-contrast: #D4CAC6; /*--> bra */
     --color-contrast2:#1da3a8;
     --color-warning: red;
   }

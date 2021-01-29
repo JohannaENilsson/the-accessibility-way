@@ -29,6 +29,7 @@ const HeaderWithA11y = ({ headerText }) => {
       <h1>{headerText}</h1>
       <NavigationWithA11y />
       <input
+        id="switchDarkMode"
         type="checkbox"
         checked={isDark}
         value={isDark}
