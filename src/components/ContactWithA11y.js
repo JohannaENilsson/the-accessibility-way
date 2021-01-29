@@ -22,10 +22,7 @@ const ContactWithA11y = () => {
       console.log("array ", errObj);
 
       if (value === "" && key === "firstName") {
-        console.log("In if ", entry);
-
         errObj[key] = "Field can´t be empty";
-
         valid = false;
       }
       if (key === "email" && !value.includes("@")) {
@@ -66,9 +63,7 @@ const ContactWithA11y = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorForm({});
-
     let isValid = validateForm();
-
     {
       isValid ? console.log("true", isValid) : console.log(isValid);
     }
@@ -87,12 +82,17 @@ const ContactWithA11y = () => {
             name="firstName"
             value={formInput.firstName}
             onChange={(e) => handleChange(e)}
+            aria-describedby="firstNameNote firstNameError"
           />
-          {/* {formInput.firstName.length < 1 && (
-            <span>*Your name must be at least 2 characters</span>
-          )} */}
+
+          <span id="firstNameNote">
+            Your name must be at least 2 characters
+          </span>
+
           {errorForm.firstName && (
-            <span className="error">{errorForm.firstName}</span>
+            <span className="error" id="firstNameError">
+              {errorForm.firstName}
+            </span>
           )}
           <label htmlFor="surname">Surname: </label>
           <input
@@ -100,12 +100,13 @@ const ContactWithA11y = () => {
             name="surname"
             value={formInput.surname}
             onChange={(e) => handleChange(e)}
+            aria-describedby="surnameNote surnameError"
           />
           {/* {formInput.surname.length < 1 && (
-            <span>*Your surname must be at least 2 characters</span>
+            <span id="surnameNote">*Your surname must be at least 2 characters</span>
           )} */}
           {/* {errorForm.surname && (
-            <span className="error">{errorForm.surname}</span>
+            <span className="error" id="surnameError">{errorForm.surname}</span>
           )} */}
           <label htmlFor="email">Email: *</label>
           <input
@@ -113,17 +114,28 @@ const ContactWithA11y = () => {
             name="email"
             value={formInput.email}
             onChange={(e) => handleChange(e)}
+            aria-describedby="emailNote emailError"
           />
+          {errorForm.email && (
+            <span className="error" id="emailError">
+              {errorForm.email}
+            </span>
+          )}
 
-          {errorForm.email && <span className="error">{errorForm.email}</span>}
           <label htmlFor="phone">Phone: </label>
           <input
             type="phone"
             name="phone"
             value={formInput.phone}
             onChange={(e) => handleChange(e)}
+            aria-describedby="phoneNote phoneError"
           />
-          {errorForm.phone && <span className="error">{errorForm.phone}</span>}
+          {errorForm.phone && (
+            <span className="error" id="phoneError">
+              {errorForm.phone}
+            </span>
+          )}
+
           <label htmlFor="microgreen">Pick your favorite microgreen:</label>
           <select
             onChange={(e) => handleChange(e)}
@@ -138,24 +150,28 @@ const ContactWithA11y = () => {
             <option value="broccoli">Broccoli</option>
             <option value="alfalfa">Alfalfa</option>
           </select>
-          <h3>Do you want to receive information by Phone or email</h3>
 
-          <label htmlFor="email">Email: </label>
-          <input
-            type="radio"
-            id="email"
-            name="information"
-            value="email"
-            onChange={(e) => handleChange(e)}
-          />
-          <label htmlFor="phone">Phone: </label>
-          <input
-            type="radio"
-            id="phone"
-            name="information"
-            value="phone"
-            onChange={(e) => handleChange(e)}
-          />
+          <fieldset>
+            <legend>
+              Do you want to receive information by Phone or email?
+            </legend>
+            <label htmlFor="emailInformation">By email: </label>
+            <input
+              type="radio"
+              id="emailInformation"
+              name="information"
+              value="email"
+              onChange={(e) => handleChange(e)}
+            />
+            <label htmlFor="phoneInformation">By phone: </label>
+            <input
+              type="radio"
+              id="phoneInformation"
+              name="information"
+              value="phone"
+              onChange={(e) => handleChange(e)}
+            />
+          </fieldset>
           <label htmlFor="save">
             Do you agree to let us save our information? *
           </label>
@@ -165,8 +181,13 @@ const ContactWithA11y = () => {
             checked={formInput.subscribe}
             value={formInput.subscribe}
             onChange={(e) => handleChange(e)}
+            aria-describedby="saveError"
           />
-          {errorForm.save && <span className="error">{errorForm.save}</span>}
+          {errorForm.save && (
+            <span className="error" id="saveError">
+              {errorForm.save}
+            </span>
+          )}
           <button type="reset">Reset</button>
           <button type="submit">Submit</button>
         </form>
