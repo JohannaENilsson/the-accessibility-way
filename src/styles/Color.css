@@ -6,8 +6,7 @@ html {
     --color-complement: #64616A;
     --color-contrast: #141822; /*--> bra */
     --color-contrast2:#1da3a8;
-    --color-warning: red;
-    
+    --color-warning: red;   
   }
 
   html.dark {

@@ -80,6 +80,7 @@ const ContactWithA11y = () => {
           <input
             type="text"
             name="firstName"
+            id="firstName"
             value={formInput.firstName}
             onChange={(e) => handleChange(e)}
             aria-describedby="firstNameNote firstNameError"
@@ -98,6 +99,7 @@ const ContactWithA11y = () => {
           <input
             type="text"
             name="surname"
+            id="surname"
             value={formInput.surname}
             onChange={(e) => handleChange(e)}
             aria-describedby="surnameNote surnameError"
@@ -112,6 +114,7 @@ const ContactWithA11y = () => {
           <input
             type="email"
             name="email"
+            id="email"
             value={formInput.email}
             onChange={(e) => handleChange(e)}
             aria-describedby="emailNote emailError"
@@ -126,6 +129,7 @@ const ContactWithA11y = () => {
           <input
             type="phone"
             name="phone"
+            id="phone"
             value={formInput.phone}
             onChange={(e) => handleChange(e)}
             aria-describedby="phoneNote phoneError"
@@ -140,6 +144,7 @@ const ContactWithA11y = () => {
           <select
             onChange={(e) => handleChange(e)}
             name="microgreen"
+            id="microgreen"
             value={formInput.microgreen}
           >
             <option value="Pick" disabled>
@@ -178,6 +183,7 @@ const ContactWithA11y = () => {
           <input
             type="checkbox"
             name="save"
+            name="id"
             checked={formInput.subscribe}
             value={formInput.subscribe}
             onChange={(e) => handleChange(e)}

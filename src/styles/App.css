@@ -1,10 +1,13 @@
+@import "Text.css";
 @import "Color.css"; 
 @import "Home-style.css";
+
 /* @import "media-query.css"; */
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  font-size: var(--text-paragraph);
 }
 
 /* || main styling */
@@ -28,6 +31,7 @@ a {
   line-height: 50px;
   width: 80px;
   text-align: center;
+  font-size: 2.0rem;
 }
 .active {
   background-color: var(--color-contrast2);
@@ -91,8 +95,6 @@ h1 {
 
 
 img, iframe {
-  width: 280px;
-  height: 280px;
   margin: 1%;
   background-color: var(--color-contrast2);
   object-fit: cover;

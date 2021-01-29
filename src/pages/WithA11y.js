@@ -29,14 +29,49 @@ const WithA11y = () => {
         <section>
           <h2>they're probably lying to make youfeel better?</h2>
           <div className="centerRow" role="presentation">
-            <img src={WaterMicrogreens} alt="Water microgreens" />
-            <img src={Beetroot} alt="Beetroot shoots" />
-            <img src={Cress} alt="Cress shoots" />
-            <img src={InJars} alt="Different shoots in jars" />
-            <img src={SproutedShoots} alt="Sprouted shoots" />
-            <img src={PeaShoots} alt="Pea shoots" />
-            <img src={SeedsInSoaking} alt="seeds in soaking" />
-            <img src={SeedsAreRinsed} alt="seeds are rinsed" />
+            <img
+              src={WaterMicrogreens}
+              alt="Water microgreens"
+              width="280px"
+              height="280px"
+            />
+            <img
+              src={Beetroot}
+              alt="Beetroot shoots"
+              width="280px"
+              height="280px"
+            />
+            <img src={Cress} alt="Cress shoots" width="280px" height="280px" />
+            <img
+              src={InJars}
+              alt="Different shoots in jars"
+              width="280px"
+              height="280px"
+            />
+            <img
+              src={SproutedShoots}
+              alt="Sprouted shoots"
+              width="280px"
+              height="280px"
+            />
+            <img
+              src={PeaShoots}
+              alt="Pea shoots"
+              width="280px"
+              height="280px"
+            />
+            <img
+              src={SeedsInSoaking}
+              alt="seeds in soaking"
+              width="280px"
+              height="280px"
+            />
+            <img
+              src={SeedsAreRinsed}
+              alt="seeds are rinsed"
+              width="280px"
+              height="280px"
+            />
             {/* <video width="300" height="300" controls muted>   ////// <------- varför funkar inte detta ?
         <source src="https://www.youtube.com/embed/o64sHhfQoBw" />
       </video> */}
