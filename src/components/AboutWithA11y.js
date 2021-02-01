@@ -19,7 +19,7 @@ const AboutWithA11y = () => {
           bloke, tell me what normal blokes do! Father Christmas. Santa Claus.
           Or as I've always known him: Jeff.
         </p>
-        <h2>You know how I sometimes have really brilliant ideas?</h2>
+        <h3>You know how I sometimes have really brilliant ideas?</h3>
         <p>
           I hate yogurt. It's just stuff with bits in. No, I'll fix it. I'm good
           at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call

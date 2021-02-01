@@ -1,4 +1,80 @@
 html {
     font-size: 100%;
-    --text-paragraph: 1.5em;
+    --baseline: 1.5; 
+    line-height: var(--baseline);
+   /* padding: 1.5rem; */
 }
+
+  h1 {
+    font-size: 2.5rem;
+      /* line-height: calc(var(--baseline) * 1.5em); */
+      /* margin: calc(var(--baseline) * 1em); */
+      
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 1em 0.65em 1em 0.65em;
+    line-height: var(--baseline);
+  }
+  h3 {
+    font-size: 1.25em;
+    margin: 1em 0.65em 1em 0.65em;
+    line-height: var(--baseline);
+  }
+a{
+    font-size: 1.5em;
+}
+  p {
+    font-size: 1.125em; /*18px*/
+      line-height: var(--baseline);
+      margin: 0 1em 1em 1em;
+  }
+
+
+  @media(min-width: 18.7em) and (max-width: 28em) {
+    html{
+        --baseline: 1.5; /* 24 */
+    }
+    a{
+        font-size: 1.25em;
+    }
+}
+
+
+@media(min-width: 28em) and (max-width: 37.5em) {
+    html{
+        --baseline: 1.75; 
+    } 
+    a{
+        font-size: 1.5em;
+    }
+    
+    h2,h3 {
+        line-height: 1.5;
+    }
+} 
+
+@media(min-width: 37.5em) and (max-width: 62.5em) {
+    html{
+        --baseline: 1.75; 
+    } 
+
+    p {
+        font-size: 1.25em; /*20px*/
+    }
+    h2,h3 {
+        line-height: 1.5;
+    }
+} 
+
+@media(min-width: 62.5em) {
+    html{
+        --baseline: 1.75; 
+    } 
+    a{
+        font-size: 1.625em;
+    }
+    h2,h3 {
+        line-height: 1.5;
+    }
+} 

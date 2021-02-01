@@ -1,13 +1,12 @@
-import NavigationNoA11y from "../components/NavigationNoA11y";
+import HeaderNoA11y from "../components/HeaderNoA11y";
 
 const NoA11y = () => {
   return (
-    <main>
+    <div className="main">
       <header>
-        <h1>No thought of A11Y</h1>
-        <NavigationNoA11y />
+        <HeaderNoA11y headerText={"No thought of A11Y"} />
       </header>
-    </main>
+    </div>
   );
 };
 

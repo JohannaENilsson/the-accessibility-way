@@ -1,9 +1,9 @@
-import NavigationNoA11y from "./NavigationNoA11y";
+import HeaderNoA11y from "./HeaderNoA11y";
 
 const AboutNoA11y = () => {
   return (
-    <main>
-      <NavigationNoA11y />
+    <div className="main">
+      <HeaderNoA11y headerText={"About No A11Y"} />
       <h1>
         You know when grown-ups tell you 'everything's going to be fine' and you
         think they're probably lying to make you feel better?
@@ -17,14 +17,14 @@ const AboutNoA11y = () => {
         bloke, tell me what normal blokes do! Father Christmas. Santa Claus. Or
         as I've always known him: Jeff.
       </p>
-      <h2>You know how I sometimes have really brilliant ideas?</h2>
+      <h3>You know how I sometimes have really brilliant ideas?</h3>
       <p>
         I hate yogurt. It's just stuff with bits in. No, I'll fix it. I'm good
         at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me
         the Rotmeister. Aw, you're all Mr. Grumpy Face today. Did I mention we
         have comfy chairs?
       </p>
-    </main>
+    </div>
   );
 };
 

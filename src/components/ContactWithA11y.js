@@ -183,7 +183,7 @@ const ContactWithA11y = () => {
           <input
             type="checkbox"
             name="save"
-            name="id"
+            id="save"
             checked={formInput.subscribe}
             value={formInput.subscribe}
             onChange={(e) => handleChange(e)}
