@@ -60,97 +60,96 @@ const ContactNoA11y = () => {
     <>
       <HeaderNoA11y headerText={"Contact No A11Y"} />
       <div className="main centerColumn">
-        <form>
-          <h2>Sign up and become a member</h2>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First name:</label>
+        <h2>Sign up and become a member</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="firstName">First name:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            value={formInput.firstName}
+            onChange={(e) => handleChange(e)}
+          />
+
+          <label htmlFor="surname">Surname: </label>
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            value={formInput.surname}
+            onChange={(e) => handleChange(e)}
+          />
+
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formInput.email}
+            onChange={(e) => handleChange(e)}
+          />
+
+          <label htmlFor="phone">Phone: </label>
+          <input
+            type="phone"
+            name="phone"
+            id="phone"
+            value={formInput.phone}
+            onChange={(e) => handleChange(e)}
+          />
+
+          <label htmlFor="microgreen">Pick your favorite microgreen:</label>
+          <select
+            onChange={(e) => handleChange(e)}
+            name="microgreen"
+            id="microgreen"
+            value={formInput.microgreen}
+          >
+            <option value="Pick" disabled>
+              Pick a microgreen
+            </option>
+            <option value="beetroot">Beetroot</option>
+            <option value="garlic">Garlic</option>
+            <option value="broccoli">Broccoli</option>
+            <option value="alfalfa">Alfalfa</option>
+          </select>
+
+          <fieldset>
+            <legend>
+              Do you want to receive information by Phone or email?
+            </legend>
+            <label htmlFor="emailInformation">By email: </label>
             <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              value={formInput.firstName}
+              type="radio"
+              id="emailInformation"
+              name="information"
+              value="email"
               onChange={(e) => handleChange(e)}
             />
-
-            <label htmlFor="surname">Surname: </label>
+            <label htmlFor="phoneInformation">By phone: </label>
             <input
-              type="text"
-              name="surname"
-              id="surname"
-              value={formInput.surname}
+              type="radio"
+              id="phoneInformation"
+              name="information"
+              value="phone"
               onChange={(e) => handleChange(e)}
             />
+          </fieldset>
+          <label htmlFor="save">
+            Do you agree to let us save our information?
+          </label>
+          <input
+            type="checkbox"
+            name="save"
+            id="save"
+            checked={formInput.subscribe}
+            value={formInput.subscribe}
+            onChange={(e) => handleChange(e)}
+          />
 
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={formInput.email}
-              onChange={(e) => handleChange(e)}
-            />
-
-            <label htmlFor="phone">Phone: </label>
-            <input
-              type="phone"
-              name="phone"
-              id="phone"
-              value={formInput.phone}
-              onChange={(e) => handleChange(e)}
-            />
-
-            <label htmlFor="microgreen">Pick your favorite microgreen:</label>
-            <select
-              onChange={(e) => handleChange(e)}
-              name="microgreen"
-              id="microgreen"
-              value={formInput.microgreen}
-            >
-              <option value="Pick" disabled>
-                Pick a microgreen
-              </option>
-              <option value="beetroot">Beetroot</option>
-              <option value="garlic">Garlic</option>
-              <option value="broccoli">Broccoli</option>
-              <option value="alfalfa">Alfalfa</option>
-            </select>
-
-            <fieldset>
-              <legend>
-                Do you want to receive information by Phone or email?
-              </legend>
-              <label htmlFor="emailInformation">By email: </label>
-              <input
-                type="radio"
-                id="emailInformation"
-                name="information"
-                value="email"
-                onChange={(e) => handleChange(e)}
-              />
-              <label htmlFor="phoneInformation">By phone: </label>
-              <input
-                type="radio"
-                id="phoneInformation"
-                name="information"
-                value="phone"
-                onChange={(e) => handleChange(e)}
-              />
-            </fieldset>
-            <label htmlFor="save">
-              Do you agree to let us save our information?
-            </label>
-            <input
-              type="checkbox"
-              name="save"
-              id="save"
-              checked={formInput.subscribe}
-              value={formInput.subscribe}
-              onChange={(e) => handleChange(e)}
-            />
-
-            <button type="submit">Submit</button>
-          </form>
+          <button type="submit">Submit</button>
         </form>
+
         <p>Required fields are marked width red</p>
       </div>
     </>

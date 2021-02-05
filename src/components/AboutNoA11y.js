@@ -4,10 +4,10 @@ const AboutNoA11y = () => {
   return (
     <div className="main">
       <HeaderNoA11y headerText={"About No A11Y"} />
-      <h1>
+      <h2>
         You know when grown-ups tell you 'everything's going to be fine' and you
         think they're probably lying to make you feel better?
-      </h1>
+      </h2>
       <p>
         Heh-haa! Super squeaky bum time! I'm nobody's taxi service; I'm not
         gonna be there to catch you every time you feel like jumping out of a
