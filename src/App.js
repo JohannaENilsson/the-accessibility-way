@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/App.css";
 
 const routes = [
-  { path: "/", component: Start },
+  { path: "/start", component: Start },
   { path: "/noA11y/", component: NoA11y },
   { path: "/withA11y/", component: WithA11y },
   { path: "/contact-withA11y/", component: ContactWithA11y },

@@ -1,9 +1,11 @@
+import { useState } from "react";
 import NavigationWithA11y from "./NavigationWithA11y";
 import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import createPersistedState from "use-persisted-state";
-const useIsDarkState = createPersistedState("isDark");
+import { Redirect } from "react-router-dom";
 
+const useIsDarkState = createPersistedState("isDark");
 const DARK_CLASS = "dark";
 
 const HeaderWithA11y = ({ headerText }) => {
@@ -17,6 +19,7 @@ const HeaderWithA11y = ({ headerText }) => {
     }
   );
   const [isDark, setIsDark] = useIsDarkState(systemPrefersDark);
+  const [redirect, setRedirect] = useState(false);
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add(DARK_CLASS);
@@ -26,6 +29,19 @@ const HeaderWithA11y = ({ headerText }) => {
   }, [isDark]);
   return (
     <header>
+      <button
+        onClick={() => setRedirect(true)}
+        aria-labelledby="button-label"
+        id="buttonIcon"
+      >
+        <span id="button-label" hidden>
+          Restart
+        </span>
+        {redirect && <Redirect push to="/start" />}
+        <span className="material-icons" aria-hidden="true" focusable="false">
+          restart_alt
+        </span>
+      </button>
       <h1>{headerText}</h1>
       <NavigationWithA11y />
       <input

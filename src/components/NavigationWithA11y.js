@@ -1,9 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavigationWithA11y = () => {
   return (
     <nav>
-      <Link to="/">Start</Link>
       <NavLink to="/withA11y/" activeClassName="active">
         Home
       </NavLink>

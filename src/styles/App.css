@@ -3,6 +3,7 @@
 @import "Color.css"; 
 @import "Home-style.css";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 
 /* @import "media-query.css"; */
@@ -124,3 +125,7 @@ form {
 }
 
 
+#buttonIcon{
+  background-color: var(--color-background);
+  border: none;
+}
