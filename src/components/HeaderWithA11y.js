@@ -37,7 +37,7 @@ const HeaderWithA11y = ({ headerText }) => {
         <span id="button-label" hidden>
           Restart
         </span>
-        {redirect && <Redirect push to="/start" />}
+        {redirect && <Redirect push to="/" />}
         <span className="material-icons" aria-hidden="true" focusable="false">
           restart_alt
         </span>

@@ -1,4 +1,5 @@
 import HeaderWithA11y from "./HeaderWithA11y";
+import ModalWithA11y from "./ModalWithA11y";
 import { useState } from "react";
 
 const ContactWithA11y = () => {
@@ -12,6 +13,7 @@ const ContactWithA11y = () => {
     phone: "",
   });
   const [errorForm, setErrorForm] = useState({});
+  const [showModal, setShowModal] = useState(true);
 
   const validateForm = () => {
     let valid = true;
@@ -46,6 +48,9 @@ const ContactWithA11y = () => {
 
     setFormInput({ ...formInput, [name]: value });
   };
+  const deactivateModal = () => {
+    setShowModal(false);
+  };
 
   const handleReset = () => {
     setErrorForm({});
@@ -65,14 +70,21 @@ const ContactWithA11y = () => {
     setErrorForm({});
     let isValid = validateForm();
     {
-      isValid ? console.log("true", isValid) : console.log(isValid);
+      isValid ? setShowModal(true) : console.log(isValid);
     }
   };
   return (
     <>
+      <a href="#maincontent">Skip to main content</a>
       <HeaderWithA11y headerText={"Contact with A11Y"} />
-
-      <main className="centerColumn">
+      {showModal && (
+        <ModalWithA11y
+          setShowModal={setShowModal}
+          deactivateModal={deactivateModal}
+          formInput={formInput}
+        />
+      )}
+      <main className="centerColumn" id="maincontent">
         <h2>Sign up and become a member</h2>
         <p>Required fields are marked width blue and a *</p>
         <form onSubmit={handleSubmit} onReset={handleReset}>

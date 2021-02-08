@@ -7,7 +7,7 @@ const HeaderNoA11y = ({ headerText }) => {
   return (
     <div className="header">
       <button onClick={() => setRedirect(true)} id="buttonIcon">
-        {redirect && <Redirect push to="/start" />}
+        {redirect && <Redirect push to="/" />}
         <span className="material-icons">restart_alt</span>
       </button>
       <h1>{headerText}</h1>
