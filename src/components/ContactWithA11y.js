@@ -75,7 +75,9 @@ const ContactWithA11y = () => {
   };
   return (
     <>
-      <a href="#maincontent">Skip to main content</a>
+      <a href="#maincontent" id="skipLink">
+        Skip to main content
+      </a>
       <HeaderWithA11y headerText={"Contact with A11Y"} />
       {showModal && (
         <ModalWithA11y

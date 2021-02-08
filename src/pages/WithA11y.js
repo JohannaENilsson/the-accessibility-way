@@ -11,7 +11,9 @@ import SeedsAreRinsed from "../assets/seedsAreRinsed.png";
 const WithA11y = () => {
   return (
     <>
-      <a href="#maincontent">Skip to main content</a>
+      <a href="#maincontent" id="skipLink">
+        Skip to main content
+      </a>
       <HeaderWithA11y headerText={"With A11Y"} />
 
       <main className="centerColumn" id="maincontent">

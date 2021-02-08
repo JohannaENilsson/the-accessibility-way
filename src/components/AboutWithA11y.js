@@ -3,7 +3,9 @@ import HeaderWithA11y from "./HeaderWithA11y";
 const AboutWithA11y = () => {
   return (
     <>
-      <a href="#maincontent">Skip to main content</a>
+      <a href="#maincontent" id="skipLink">
+        Skip to main content
+      </a>
       <HeaderWithA11y headerText={"About with A11Y"} />
 
       <main className="centerColumn" id="maincontent">
