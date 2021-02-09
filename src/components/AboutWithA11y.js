@@ -1,8 +1,12 @@
 import HeaderWithA11y from "./HeaderWithA11y";
+import { Helmet } from "react-helmet";
 
 const AboutWithA11y = () => {
   return (
     <>
+      <Helmet>
+        <title>About - The accessibility way</title>
+      </Helmet>
       <a href="#maincontent" id="skipLink">
         Skip to main content
       </a>

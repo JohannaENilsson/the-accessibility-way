@@ -7,10 +7,14 @@ import SproutedShoots from "../assets/sproutedShoots.jpg";
 import PeaShoots from "../assets/peaShoots.jpg";
 import SeedsInSoaking from "../assets/seedsInSoaking.jpg";
 import SeedsAreRinsed from "../assets/seedsAreRinsed.png";
+import { Helmet } from "react-helmet";
 
 const WithA11y = () => {
   return (
     <>
+      <Helmet>
+        <title>Home - The accessibility way</title>
+      </Helmet>
       <a href="#maincontent" id="skipLink">
         Skip to main content
       </a>

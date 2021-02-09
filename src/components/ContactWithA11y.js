@@ -1,6 +1,7 @@
 import HeaderWithA11y from "./HeaderWithA11y";
 import ModalWithA11y from "./ModalWithA11y";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const ContactWithA11y = () => {
   const [formInput, setFormInput] = useState({
@@ -75,6 +76,9 @@ const ContactWithA11y = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Contact - The accessibility way</title>
+      </Helmet>
       <a href="#maincontent" id="skipLink">
         Skip to main content
       </a>
