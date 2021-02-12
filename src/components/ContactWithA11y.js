@@ -1,5 +1,6 @@
 import HeaderWithA11y from "./HeaderWithA11y";
 import ModalWithA11y from "./ModalWithA11y";
+import { validateForm } from "../action/validate";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 
@@ -14,33 +15,8 @@ const ContactWithA11y = () => {
     phone: "",
   });
   const [errorForm, setErrorForm] = useState({});
-  const [showModal, setShowModal] = useState(true);
-
-  const validateForm = () => {
-    let valid = true;
-
-    let errObj = {};
-    Object.entries(formInput).forEach((entry) => {
-      const [key, value] = entry;
-      console.log("array ", errObj);
-
-      if (value === "" && key === "firstName") {
-        errObj[key] = "Field can´t be empty";
-        valid = false;
-      }
-      if (key === "email" && !value.includes("@")) {
-        errObj[key] = "Email is not valid";
-        valid = false;
-      }
-      if (key === "save" && !value) {
-        errObj[key] = "Must agree";
-        valid = false;
-      }
-    });
-    setErrorForm(errObj);
-    return valid;
-  };
-  console.log("error ", errorForm);
+  const [showModal, setShowModal] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const target = e.target;
@@ -51,6 +27,14 @@ const ContactWithA11y = () => {
   };
   const deactivateModal = () => {
     setShowModal(false);
+  };
+  const submitModal = () => {
+    setShowModal(false);
+    handleReset();
+    setSuccess(true);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
   };
 
   const handleReset = () => {
@@ -64,16 +48,17 @@ const ContactWithA11y = () => {
       save: false,
       phone: "",
     });
-    console.log(formInput);
   };
+  console.log(typeof formInput.save);
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorForm({});
-    let isValid = validateForm();
+    let isValid = validateForm(formInput, setErrorForm);
     {
       isValid ? setShowModal(true) : console.log(isValid);
     }
   };
+
   return (
     <>
       <Helmet>
@@ -85,12 +70,18 @@ const ContactWithA11y = () => {
       <HeaderWithA11y headerText={"Contact with A11Y"} />
       {showModal && (
         <ModalWithA11y
-          setShowModal={setShowModal}
           deactivateModal={deactivateModal}
           formInput={formInput}
+          submitModal={submitModal}
         />
       )}
       <main className="centerColumn" id="maincontent">
+        {success && (
+          <div role="presentation" id="success">
+            <span className="material-icons">done</span>
+          </div>
+        )}
+
         <h2>Sign up and become a member</h2>
         <p>Required fields are marked width blue and a *</p>
         <form onSubmit={handleSubmit} onReset={handleReset}>
@@ -102,17 +93,22 @@ const ContactWithA11y = () => {
             value={formInput.firstName}
             onChange={(e) => handleChange(e)}
             aria-describedby="firstNameNote firstNameError"
+            aria-invalid={!errorForm.firstName ? false : true}
           />
 
           <span id="firstNameNote">
-            Your name must be at least 2 characters
+            Your first name must be at least 2 characters
           </span>
 
-          {errorForm.firstName && (
-            <span className="error" id="firstNameError">
-              {errorForm.firstName}
-            </span>
-          )}
+          <span
+            className="error"
+            id="firstNameError"
+            aria-atomic="true"
+            aria-live="polite"
+          >
+            {errorForm.firstName}
+          </span>
+
           <label htmlFor="surname">Surname: </label>
           <input
             type="text"
@@ -121,13 +117,17 @@ const ContactWithA11y = () => {
             value={formInput.surname}
             onChange={(e) => handleChange(e)}
             aria-describedby="surnameNote surnameError"
+            // aria-invalid={!errorForm.surname ? false : true}
           />
-          {/* {formInput.surname.length < 1 && (
-            <span id="surnameNote">*Your surname must be at least 2 characters</span>
-          )} */}
-          {/* {errorForm.surname && (
-            <span className="error" id="surnameError">{errorForm.surname}</span>
-          )} */}
+
+          {/* <span id="surnameNote">
+            Your surname must be at least 2 characters
+          </span>
+
+          <span className="error" id="surnameError">
+            {errorForm.surname}
+          </span> */}
+
           <label htmlFor="email">Email: *</label>
           <input
             type="email"
@@ -136,14 +136,19 @@ const ContactWithA11y = () => {
             value={formInput.email}
             onChange={(e) => handleChange(e)}
             aria-describedby="emailNote emailError"
+            aria-invalid={!errorForm.email ? false : true}
           />
-          {errorForm.email && (
-            <span className="error" id="emailError">
-              {errorForm.email}
-            </span>
-          )}
 
-          <label htmlFor="phone">Phone: </label>
+          <span
+            className="error"
+            id="emailError"
+            aria-atomic="true"
+            aria-live="polite"
+          >
+            {errorForm.email}
+          </span>
+
+          {/* <label htmlFor="phone">Phone: </label>
           <input
             type="phone"
             name="phone"
@@ -156,9 +161,9 @@ const ContactWithA11y = () => {
             <span className="error" id="phoneError">
               {errorForm.phone}
             </span>
-          )}
+          )} */}
 
-          <label htmlFor="microgreen">Pick your favorite microgreen:</label>
+          {/* <label htmlFor="microgreen">Pick your favorite microgreen:</label>
           <select
             onChange={(e) => handleChange(e)}
             name="microgreen"
@@ -172,7 +177,7 @@ const ContactWithA11y = () => {
             <option value="garlic">Garlic</option>
             <option value="broccoli">Broccoli</option>
             <option value="alfalfa">Alfalfa</option>
-          </select>
+          </select> */}
 
           <fieldset>
             <legend>
@@ -202,16 +207,22 @@ const ContactWithA11y = () => {
             type="checkbox"
             name="save"
             id="save"
-            checked={formInput.subscribe}
-            value={formInput.subscribe}
+            checked={formInput.save}
+            value={formInput.save}
             onChange={(e) => handleChange(e)}
             aria-describedby="saveError"
+            aria-invalid={!errorForm.save ? false : true}
           />
-          {errorForm.save && (
-            <span className="error" id="saveError">
-              {errorForm.save}
-            </span>
-          )}
+
+          <span
+            className="error"
+            id="saveError"
+            aria-atomic="true"
+            aria-live="polite"
+          >
+            {errorForm.save}
+          </span>
+
           <button type="reset">Reset</button>
           <button type="submit">Submit</button>
         </form>

@@ -1,6 +1,6 @@
 import AriaModal from "react-aria-modal";
 
-const ModalWithA11y = ({ deactivateModal, formInput }) => {
+const ModalWithA11y = ({ deactivateModal, formInput, submitModal }) => {
   console.log(formInput);
 
   return (
@@ -32,7 +32,7 @@ const ModalWithA11y = ({ deactivateModal, formInput }) => {
             Want information by: <b>{formInput.information}</b>
           </p>
           <button onClick={deactivateModal}>Change</button>
-          <button onClick={() => console.log("hej")} id="demo-one-deactivate">
+          <button onClick={submitModal} id="demo-one-deactivate">
             Confirm and submit
           </button>
         </section>
