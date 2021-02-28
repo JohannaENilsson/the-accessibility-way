@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import test from "../assets/colour-1885352_640.jpg";
+import test from "../assets/create-3026190_640.jpg";
 
 import { Helmet } from "react-helmet";
 import Card from "../components/Card";
@@ -34,12 +34,13 @@ const Home = () => {
           </p>
         </section>
 
-        <article>
+        <section>
           <h2>Morbi aliquam sapien at mattis faucibus?</h2>
           <div className="centerRow">
-            {UtilsCard.map((item) => {
-              return <Card item={item} key={item.id} />;
-            })}
+            {UtilsCard.length > 0 &&
+              UtilsCard.map((item) => {
+                return <Card item={item} key={item.id} />;
+              })}
             <img
               src={test}
               alt="Water microgreens"
@@ -47,7 +48,7 @@ const Home = () => {
               height="280px"
             />
           </div>
-        </article>
+        </section>
       </main>
     </>
   );
