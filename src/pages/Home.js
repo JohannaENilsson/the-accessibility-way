@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import test from "../assets/social-media-1989152_640.jpg";
+import test from "../assets/colour-1885352_640.jpg";
 
 import { Helmet } from "react-helmet";
 import Card from "../components/Card";

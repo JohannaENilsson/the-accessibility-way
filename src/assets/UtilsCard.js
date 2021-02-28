@@ -38,29 +38,39 @@ export const UtilsCard = [
     alt: "",
     width: "280px",
     height: "280px",
+    modal: [
+      {
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. Nunc faucibus, sem at ullamcorper rhoncus, sapien mauris varius mauris, in dapibus turpis orci fermentum mi. Pellentesque placerat, nisi ac pharetra consectetur, mi dolor tincidunt ligula, ut vestibulum leo sem vitae ipsum.",
+        font: "18px",
+      },
+      {
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. Nunc faucibus, sem at ullamcorper rhoncus, sapien mauris varius mauris, in dapibus turpis orci fermentum mi. Pellentesque placerat, nisi ac pharetra consectetur, mi dolor tincidunt ligula, ut vestibulum leo sem vitae ipsum.",
+        // color: "black",
+      },
+    ],
   },
   {
     id: 5,
-    title: "Färg",
+    title: "Contrast",
     description:
-      "Ett bra tips är att arbeta med kontraster, det vill säga mörkt och ljust. Samt att inte förlita sig till att färger är enda sättet att göra användaren uppmärksam om viktig information på hemsidan.",
+      "The way I see it, every life is a pile of good things and bad things.â€¦hey.â€¦the good things don't always soften thebad things; but vice-versa the bad things don't necessarily spoil the good things and make the",
     imgName: "/static/media/colour-1885352_640.f930eb29.jpg",
-    alt: "Smoke different colors",
+    alt: "Smoke in different colors",
     width: "280px",
     height: "280px",
-    color: "lightgrey",
-    background: "white",
-  },
-  {
-    id: 6,
-    title: "Färg",
-    description:
-      "Ett bra tips är att arbeta med kontraster, det vill säga mörkt och ljust. Samt att inte förlita sig till att färger är enda sättet att göra användaren uppmärksam om viktig information på hemsidan.",
-    imgName: "/static/media/beaded-2137080_640.dc0a51dd.jpg",
-    alt: "pencils in different colors",
-    width: "280px",
-    height: "280px",
-    color: "black",
-    background: "white",
+    modal: [
+      {
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. Nunc faucibus, sem at ullamcorper rhoncus, sapien mauris varius mauris, in dapibus turpis orci fermentum mi. Pellentesque placerat, nisi ac pharetra consectetur, mi dolor tincidunt ligula, ut vestibulum leo sem vitae ipsum.",
+        color: "lightgrey",
+      },
+      {
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. Nunc faucibus, sem at ullamcorper rhoncus, sapien mauris varius mauris, in dapibus turpis orci fermentum mi. Pellentesque placerat, nisi ac pharetra consectetur, mi dolor tincidunt ligula, ut vestibulum leo sem vitae ipsum.",
+        color: "black",
+      },
+    ],
   },
 ];
