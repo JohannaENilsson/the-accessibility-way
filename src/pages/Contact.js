@@ -1,11 +1,11 @@
-import HeaderWithA11y from "./HeaderWithA11y";
-import ModalWithA11y from "./ModalWithA11y";
+import Header from "../components/Header";
+import ModalContact from "../components/ModalContact";
 import { validateForm } from "../action/validate";
 import { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
-import DubbelForm from "../Rapport/DubbelForm";
+// import DubbelForm from "../Rapport/DubbelForm";
 
-const ContactWithA11y = () => {
+const Contact = () => {
   const [formInput, setFormInput] = useState({
     firstName: "",
     surname: "",
@@ -89,9 +89,9 @@ const ContactWithA11y = () => {
       <a href="#maincontent" id="skipLink">
         Skip to main content
       </a>
-      <HeaderWithA11y headerText={"Contact with A11Y"} />
+      <Header headerText={"Contact with A11Y"} />
       {showModal && (
-        <ModalWithA11y
+        <ModalContact
           deactivateModal={deactivateModal}
           formInput={formInput}
           submitModal={submitModal}
@@ -263,4 +263,4 @@ const ContactWithA11y = () => {
   );
 };
 
-export default ContactWithA11y;
+export default Contact;

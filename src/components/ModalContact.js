@@ -1,6 +1,6 @@
 import AriaModal from "react-aria-modal";
 
-const ModalWithA11y = ({ deactivateModal, formInput, submitModal }) => {
+const ModalContact = ({ deactivateModal, formInput, submitModal }) => {
   console.log(formInput);
 
   return (
@@ -41,4 +41,4 @@ const ModalWithA11y = ({ deactivateModal, formInput, submitModal }) => {
   );
 };
 
-export default ModalWithA11y;
+export default ModalContact;

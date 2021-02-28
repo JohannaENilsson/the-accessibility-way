@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavigationWithA11y from "./NavigationWithA11y";
+import Navigation from "./Navigation";
 import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import createPersistedState from "use-persisted-state";
@@ -8,7 +8,7 @@ import { Redirect } from "react-router-dom";
 const useIsDarkState = createPersistedState("isDark");
 const DARK_CLASS = "dark";
 
-const HeaderWithA11y = ({ headerText }) => {
+const Header = ({ headerText }) => {
   const systemPrefersDark = useMediaQuery(
     {
       query: "(prefers-color-scheme: dark)",
@@ -45,7 +45,7 @@ const HeaderWithA11y = ({ headerText }) => {
       </button>
 
       <h1>{headerText}</h1>
-      <NavigationWithA11y />
+      <Navigation />
       <input
         id="switchDarkMode"
         type="checkbox"
@@ -58,4 +58,4 @@ const HeaderWithA11y = ({ headerText }) => {
   );
 };
 
-export default HeaderWithA11y;
+export default Header;
