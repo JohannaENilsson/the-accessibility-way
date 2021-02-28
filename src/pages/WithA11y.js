@@ -1,13 +1,9 @@
 import HeaderWithA11y from "../components/HeaderWithA11y";
-import WaterMicrogreens from "../assets/water-culture-microgreens.jpg";
-import Beetroot from "../assets/beetroot.jpg";
-import Cress from "../assets/cress.jpg";
-import InJars from "../assets/inJars.jpg";
-import SproutedShoots from "../assets/sproutedShoots.jpg";
-import PeaShoots from "../assets/peaShoots.jpg";
-import SeedsInSoaking from "../assets/seedsInSoaking.jpg";
-import SeedsAreRinsed from "../assets/seedsAreRinsed.png";
+import test from "../assets/social-media-1989152_640.jpg";
+
 import { Helmet } from "react-helmet";
+import Card from "../components/Card";
+import { UtilsCard } from "../assets/UtilsCard";
 
 const WithA11y = () => {
   return (
@@ -15,12 +11,13 @@ const WithA11y = () => {
       <Helmet>
         <title>Home - The accessibility way</title>
       </Helmet>
-      <a href="#maincontent" id="skipLink">
+
+      <a href="#mainContent" id="skipLink">
         Skip to main content
       </a>
-      <HeaderWithA11y headerText={"With A11Y"} />
+      <HeaderWithA11y headerText={"The accessibility way"} />
 
-      <main className="centerColumn" id="maincontent">
+      <main className="centerColumn" id="mainContent">
         <section>
           <h2>You know how I sometimes have really brilliant ideas?</h2>
           <p>
@@ -33,62 +30,20 @@ const WithA11y = () => {
           </p>
         </section>
 
-        <section>
+        <article>
           <h2>they're probably lying to make youfeel better?</h2>
-          <div className="centerRow" role="presentation">
+          <div className="centerRow">
+            {UtilsCard.map((item) => {
+              return <Card item={item} key={item.id} />;
+            })}
             <img
-              src={WaterMicrogreens}
+              src={test}
               alt="Water microgreens"
               width="280px"
               height="280px"
             />
-            <img
-              src={Beetroot}
-              alt="Beetroot shoots"
-              width="280px"
-              height="280px"
-            />
-            <img src={Cress} alt="Cress shoots" width="280px" height="280px" />
-            <img
-              src={InJars}
-              alt="Different shoots in jars"
-              width="280px"
-              height="280px"
-            />
-            <img
-              src={SproutedShoots}
-              alt="Sprouted shoots"
-              width="280px"
-              height="280px"
-            />
-            <img
-              src={PeaShoots}
-              alt="Pea shoots"
-              width="280px"
-              height="280px"
-            />
-            <img
-              src={SeedsInSoaking}
-              alt="seeds in soaking"
-              width="280px"
-              height="280px"
-            />
-            <img
-              src={SeedsAreRinsed}
-              alt="seeds are rinsed"
-              width="280px"
-              height="280px"
-            />
-            {/* <video width="300" height="300" controls muted>   ////// <------- varför funkar inte detta ?
-        <source src="https://www.youtube.com/embed/o64sHhfQoBw" />
-      </video> */}
-            <iframe
-              title="How to grow micro greens"
-              src="https://www.youtube.com/embed/o64sHhfQoBw"
-              frameBorder="0"
-            ></iframe>
           </div>
-        </section>
+        </article>
       </main>
     </>
   );

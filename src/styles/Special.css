@@ -1,13 +1,16 @@
 .active {
-    background-color: var(--color-contrast2);
+    background-color: var(--color-contrast);
+    color: whitesmoke;
   }
   .error {
     color: var(--color-warning);
   }
   #buttonIcon{
-    background-color: var(--color-background);
+    background-color: white;
     border: none;
+    margin-left: 5px;
   }
+ 
   
   #success{
     position: absolute;
@@ -21,9 +24,10 @@
   }
   
 #skipLink{
+  font-size: 1.125em;
     position: absolute;
     top: -30px;
-    left: 8px;
+    left: 50px;
     transition: top 1s, color 2.5s;
   }
   
@@ -33,12 +37,15 @@
   }
   
   #switchDarkMode{
+    margin-left: 5px;
+    left: 5px;
     position: absolute;
     height: 20px;
     width: 36px;
-    background-color: var(--color-primary);
+    background-color: var(--color-contrast2);
     border-radius: 10PX;
     appearance: none;
+    cursor: pointer;
   }
   
   #switchDarkMode:checked::before{

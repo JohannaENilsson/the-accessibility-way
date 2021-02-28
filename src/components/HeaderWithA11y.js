@@ -35,13 +35,15 @@ const HeaderWithA11y = ({ headerText }) => {
         id="buttonIcon"
       >
         <span id="button-label" hidden>
-          Restart
+          Home
         </span>
         {redirect && <Redirect push to="/" />}
+
         <span className="material-icons" aria-hidden="true" focusable="false">
-          restart_alt
+          home
         </span>
       </button>
+
       <h1>{headerText}</h1>
       <NavigationWithA11y />
       <input

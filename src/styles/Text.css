@@ -1,41 +1,55 @@
+/* Bild i rapporten Rhytm */
 html {
     font-size: 100%;
     --baseline: 1.5; 
     line-height: var(--baseline);
-   /* padding: 1.5rem; */
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--color-contrast);
     font-weight: bold;
+    text-align: center;
   }
-   .material-icons {
-    color: var(--color-text);
-    font-size: 2.5em;
-  }
-  h1 {
+
+h1 {
     font-size: 2.5rem;
-      /* line-height: calc(var(--baseline) * 1.5em); */
-      /* margin: calc(var(--baseline) * 1em); */
-      
-  }
+    /* line-height: calc(var(--baseline) * 1.5em);
+    margin: calc(var(--baseline) * 1em); */
+}
+
+p {
+    font-size: 1.125em; 
+    line-height: var(--baseline);
+    margin: calc(var(--baseline) * 0.5em);
+}
+
+/*  */
+
+
+
+
   h2 {
     font-size: 1.5rem;
-    margin: 1em 0.65em 1em 0.65em;
-    line-height: var(--baseline);
+    margin: 1em 0.65em 0em 0.65em;
+    /* line-height: var(--baseline); */
   }
   h3 {
     font-size: 1.25em;
     margin: 1em 0.65em 1em 0.65em;
     line-height: var(--baseline);
   }
-a{
+
+
+  a{
     font-size: 1.5em;
 }
-  p {
-    font-size: 1.125em; /*18px*/
-      line-height: var(--baseline);
-      margin: 0 1em 1em 1em;
+
+
+
+
+   .material-icons {
+    color: var(--color-text);
+    font-size: 2.5em;
   }
 
 .main p {
@@ -61,6 +75,9 @@ a{
   @media(min-width: 18.7em) and (max-width: 28em) {
     html{
         --baseline: 1.5; /* 24 */
+    }
+    h1 {
+        font-size: 2.125em;
     }
     a{
         font-size: 1.25em;

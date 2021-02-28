@@ -1,0 +1,39 @@
+
+html {
+    font-size: 100%;
+    --baseline: 1.5; 
+    line-height: var(--baseline);
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: calc(var(--baseline) * 1.5em);
+    margin: calc(var(--baseline) * 1em);
+}
+
+p {
+    font-size: 1.125em; 
+    line-height: var(--baseline);
+    margin: calc(var(--baseline) * 0.5em);
+}
+
+
+
+.parentBox {
+    font-size: 20px;;
+}
+
+p {
+    font-size: 2em;
+    /*  2em -> 20px * 2em = 40px */
+}
+
+
+html {
+    font-size: 100%;;
+}
+
+p {
+    font-size: 2rem;
+    /*  2rem -> 16px * 2em = 32px */
+}

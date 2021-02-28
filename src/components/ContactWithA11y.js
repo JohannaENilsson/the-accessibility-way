@@ -1,8 +1,9 @@
 import HeaderWithA11y from "./HeaderWithA11y";
 import ModalWithA11y from "./ModalWithA11y";
 import { validateForm } from "../action/validate";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import DubbelForm from "../Rapport/DubbelForm";
 
 const ContactWithA11y = () => {
   const [formInput, setFormInput] = useState({
@@ -17,6 +18,10 @@ const ContactWithA11y = () => {
   const [errorForm, setErrorForm] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const firstNameRef = useRef();
+  const emailRef = useRef();
+  const saveRef = useRef();
 
   const handleChange = (e) => {
     const target = e.target;
@@ -49,13 +54,30 @@ const ContactWithA11y = () => {
       phone: "",
     });
   };
-  console.log(typeof formInput.save);
+  console.log(Object.keys(errorForm)[0]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorForm({});
     let isValid = validateForm(formInput, setErrorForm);
-    {
-      isValid ? setShowModal(true) : console.log(isValid);
+    console.log(isValid);
+    if (isValid === true) {
+      setShowModal(true);
+    } else {
+      handleFocus(Object.keys(isValid)[0]);
+    }
+  };
+
+  const handleFocus = (str) => {
+    console.log(str);
+    if (str === "firstName") {
+      console.log("1");
+      return firstNameRef.current.focus();
+    } else if (str === "email") {
+      console.log("2");
+      emailRef.current.focus();
+    } else if (str === "save") {
+      console.log("3");
+      saveRef.current.focus();
     }
   };
 
@@ -82,9 +104,16 @@ const ContactWithA11y = () => {
           </div>
         )}
 
+        {/* <DubbelForm /> */}
+
         <h2>Sign up and become a member</h2>
-        <p>Required fields are marked width blue and a *</p>
-        <form onSubmit={handleSubmit} onReset={handleReset}>
+
+        <form
+          onSubmit={handleSubmit}
+          onReset={handleReset}
+          className="centerColumn"
+        >
+          <p>Required fields are marked width blue and a *</p>
           <label htmlFor="firstName">First name: *</label>
           <input
             type="text"
@@ -94,6 +123,7 @@ const ContactWithA11y = () => {
             onChange={(e) => handleChange(e)}
             aria-describedby="firstNameNote firstNameError"
             aria-invalid={!errorForm.firstName ? false : true}
+            ref={firstNameRef}
           />
 
           <span id="firstNameNote">
@@ -137,6 +167,7 @@ const ContactWithA11y = () => {
             onChange={(e) => handleChange(e)}
             aria-describedby="emailNote emailError"
             aria-invalid={!errorForm.email ? false : true}
+            ref={emailRef}
           />
 
           <span
@@ -212,6 +243,7 @@ const ContactWithA11y = () => {
             onChange={(e) => handleChange(e)}
             aria-describedby="saveError"
             aria-invalid={!errorForm.save ? false : true}
+            ref={saveRef}
           />
 
           <span

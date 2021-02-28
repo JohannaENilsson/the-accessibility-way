@@ -19,5 +19,8 @@ export const validateForm = (formInput, setErrorForm) => {
     }
   });
   setErrorForm(errObj);
+  if (!valid) {
+    return errObj;
+  }
   return valid;
 };

@@ -1,0 +1,11 @@
+html {
+  --primaryBackgroundColor: white;
+  --primaryTextColor: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+      --primaryBackgroundColor: black;
+      --primaryTextColor: white;
+    }
+}
