@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 
 const About = () => {
@@ -11,7 +12,7 @@ const About = () => {
         Skip to main content
       </a>
       <Header headerText={"About with A11Y"} />
-
+      <div className="lineDecoration" role="presentation"></div>
       <main className="centerColumn" id="maincontent">
         <h2>Quisque aliquam dignissim velit, id viverra urna rhoncus ut.</h2>
         <p>
@@ -82,6 +83,8 @@ const About = () => {
           gravida. Quisque a auctor justo. Morbi ut vehicula nulla.
         </p>
       </main>
+      <div className="lineDecoration" role="presentation"></div>
+      <Footer />
     </>
   );
 };

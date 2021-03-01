@@ -10,6 +10,7 @@ export const UtilsCard = [
     height: "280px",
     modal: [
       {
+        id: 1,
         content: "CSS or useEffect + localStorage",
         // color: "lightgrey",
       },
@@ -46,11 +47,13 @@ export const UtilsCard = [
     height: "280px",
     modal: [
       {
+        id: 1,
         content:
           "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
         font: "18px",
       },
       {
+        id: 2,
         content:
           "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
         // color: "black",
@@ -68,11 +71,13 @@ export const UtilsCard = [
     height: "280px",
     modal: [
       {
+        id: 1,
         content:
           "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. ",
         color: "lightgrey",
       },
       {
+        id: 2,
         content:
           "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio. ",
         color: "black",
@@ -90,6 +95,7 @@ export const UtilsCard = [
     height: "280px",
     modal: [
       {
+        id: 1,
         content: "Rule #1: Don't use ARIA, use native HTML instead.",
         // color: "lightgrey",
       },

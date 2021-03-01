@@ -17,7 +17,7 @@ const Modal = ({ deactivateModal, cardInfo }) => {
             cardInfo.modal.map((content) => {
               return (
                 <p
-                  key={content.color}
+                  key={cardInfo.id + content.id}
                   style={{ color: content.color, fontSize: content.font }}
                 >
                   {content.content}

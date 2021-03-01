@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import ModalContact from "../components/ModalContact";
+import Footer from "../components/Footer";
 import { validateForm } from "../action/validate";
 import { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
@@ -97,6 +98,7 @@ const Contact = () => {
           submitModal={submitModal}
         />
       )}
+      <div className="lineDecoration" role="presentation"></div>
       <main className="centerColumn" id="maincontent">
         {success && (
           <div role="presentation" id="success">
@@ -259,6 +261,8 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
       </main>
+      <div className="lineDecoration" role="presentation"></div>
+      <Footer />
     </>
   );
 };

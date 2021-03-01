@@ -6,11 +6,16 @@
     color: var(--color-warning);
   }
   #buttonIcon{
-    background-color: white;
+    background-color: var(--color-secondary);
     border: none;
     margin-left: 5px;
   }
- 
+  .lineDecoration{
+    height: 0.5em;
+    width: 100%;
+    background-color: var(--color-background);
+
+  }
   
   #success{
     position: absolute;
@@ -42,10 +47,11 @@
     position: absolute;
     height: 20px;
     width: 36px;
-    background-color: var(--color-contrast2);
+    background-color: var(--color-complement);
     border-radius: 10PX;
     appearance: none;
     cursor: pointer;
+    top: 200px;
   }
   
   #switchDarkMode:checked::before{

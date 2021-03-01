@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import test from "../assets/create-3026190_640.jpg";
+import Footer from "../components/Footer";
 
 import { Helmet } from "react-helmet";
 import Card from "../components/Card";
@@ -19,6 +20,7 @@ const Home = () => {
         Skip to main content
       </a>
       <Header headerText={"The accessibility way"} />
+      <div className="lineDecoration" role="presentation"></div>
 
       <main className="centerColumn" id="mainContent">
         <section>
@@ -41,15 +43,17 @@ const Home = () => {
               UtilsCard.map((item) => {
                 return <Card item={item} key={item.id} />;
               })}
-            <img
+            {/* <img
               src={test}
               alt="Water microgreens"
               width="280px"
               height="280px"
-            />
+            /> */}
           </div>
         </section>
       </main>
+      <div className="lineDecoration" role="presentation"></div>
+      <Footer />
     </>
   );
 };
