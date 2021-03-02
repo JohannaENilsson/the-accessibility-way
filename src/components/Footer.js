@@ -1,11 +1,22 @@
 const Footer = () => {
   return (
     <footer>
-      Johanna Nilsson 2021
-      <a href="https://www.linkedin.com/in/johanna-nilsson-5a780563/">
+      <span>Johanna Nilsson 2021 – </span>
+      <a
+        href="https://www.linkedin.com/in/johanna-nilsson-5a780563/"
+        target="_blank"
+        rel="noreferrer"
+      >
         Linkedin
       </a>
-      <a href="https://github.com/JohannaENilsson">Github</a>
+      <span> – </span>
+      <a
+        href="https://github.com/JohannaENilsson"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github
+      </a>
     </footer>
   );
 };
