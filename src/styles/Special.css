@@ -8,7 +8,23 @@
   #buttonIcon{
     background-color: var(--color-secondary);
     border: none;
-    margin-left: 5px;
+    /* margin-left: 5px; */
+
+
+
+    /* font-  size: 1.125em; */
+    height: 45px;
+    width: 45px;
+    width: 0;
+    
+    border-radius: none;
+    background-color: var(--color-secondary);
+    box-shadow: none;
+     margin: 0 0 0 5px;
+
+
+
+
   }
   .lineDecoration{
     height: 0.5em;
@@ -65,7 +81,7 @@
     left: 17px;
   }
   
-  #switchDarkMode::before{
+  #switchDarkMode::before{    
     position: absolute;
     content: "";
     height: 23px;

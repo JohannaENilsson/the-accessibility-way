@@ -1,7 +1,7 @@
 import AriaModal from "react-aria-modal";
 
 const Modal = ({ deactivateModal, cardInfo }) => {
-  console.log(cardInfo);
+  //   console.log(cardInfo);
 
   return (
     <AriaModal
@@ -11,7 +11,10 @@ const Modal = ({ deactivateModal, cardInfo }) => {
       underlayStyle={{ paddingTop: "6em" }}
     >
       <div id="demo-one-modal" className="modal" style={{ display: "block" }}>
-        <section className="popUp">
+        <section
+          className="popUp centerColumn"
+          style={{ backgroundColor: cardInfo.background }}
+        >
           <h1>{cardInfo.title}</h1>
           {cardInfo.modal &&
             cardInfo.modal.map((content) => {

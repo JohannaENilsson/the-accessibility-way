@@ -1,5 +1,22 @@
 export const UtilsCard = [
   {
+    id: 2,
+    title: "Skip link",
+    description:
+      "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
+    imgName: "arrow-5165841_640.jpg",
+    alt: "Arrows with 'More than one way' in them",
+    width: "280px",
+    height: "280px",
+    modal: [
+      {
+        id: 1,
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
+      },
+    ],
+  },
+  {
     id: 1,
     title: "Dark Mode",
     description:
@@ -12,29 +29,8 @@ export const UtilsCard = [
       {
         id: 1,
         content: "CSS or useEffect + localStorage",
-        // color: "lightgrey",
       },
     ],
-  },
-  {
-    id: 2,
-    title: "Skip link",
-    description:
-      "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
-    imgName: "arrow-5165841_640.jpg",
-    alt: "Arrows with 'More than one way' in them",
-    width: "280px",
-    height: "280px",
-  },
-  {
-    id: 3,
-    title: "Icon button",
-    description:
-      "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
-    imgName: "create-3026190_640.jpg",
-    alt: "Keyboard with the word Create in one key",
-    width: "280px",
-    height: "280px",
   },
   {
     id: 4,
@@ -61,6 +57,24 @@ export const UtilsCard = [
     ],
   },
   {
+    id: 3,
+    title: "Icon button",
+    description:
+      "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
+    imgName: "create-3026190_640.jpg",
+    alt: "Keyboard with the word Create in one key",
+    width: "280px",
+    height: "280px",
+    modal: [
+      {
+        id: 1,
+        content:
+          "Morbi aliquam sapien at mattis faucibus. Morbi nisl tortor, convallis ac sapien eget, feugiat mattis elit. Duis eleifend, nisl tristique vehicula egestas, est velit fringilla arcu, id dictum quam dolor at odio",
+      },
+    ],
+  },
+
+  {
     id: 5,
     title: "Contrast",
     description:
@@ -69,6 +83,7 @@ export const UtilsCard = [
     alt: "Smoke in different colors",
     width: "280px",
     height: "280px",
+    background: "whitesmoke",
     modal: [
       {
         id: 1,
