@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import test from "../assets/create-3026190_640.jpg";
+// import test from "../assets/create-3026190_640.jpg";
 import Footer from "../components/Footer";
 
 import { Helmet } from "react-helmet";

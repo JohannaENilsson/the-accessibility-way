@@ -1,3 +1,9 @@
+.lineDecoration{
+  height: 0.5em;
+  width: 100%;
+  background-color: var(--color-background);
+}
+
 .active {
     background-color: var(--color-contrast);
     color: whitesmoke;
@@ -8,29 +14,13 @@
   #buttonIcon{
     background-color: var(--color-secondary);
     border: none;
-    /* margin-left: 5px; */
-
-
-
-    /* font-  size: 1.125em; */
     height: 45px;
     width: 45px;
     width: 0;
-    
     border-radius: none;
     background-color: var(--color-secondary);
     box-shadow: none;
-     margin: 0 0 0 5px;
-
-
-
-
-  }
-  .lineDecoration{
-    height: 0.5em;
-    width: 100%;
-    background-color: var(--color-background);
-
+    margin: 0 0 0 5px;
   }
   
   #success{

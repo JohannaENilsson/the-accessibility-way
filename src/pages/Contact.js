@@ -55,12 +55,12 @@ const Contact = () => {
       phone: "",
     });
   };
-  // console.log(Object.keys(errorForm)[0]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorForm({});
     let isValid = validateForm(formInput, setErrorForm);
-    // // console.log(isValid);
+
     if (isValid === true) {
       setShowModal(true);
     } else {
@@ -69,15 +69,11 @@ const Contact = () => {
   };
 
   const handleFocus = (str) => {
-    // console.log(str);
     if (str === "firstName") {
-      // console.log("1");
       return firstNameRef.current.focus();
     } else if (str === "email") {
-      // console.log("2");
       emailRef.current.focus();
     } else if (str === "save") {
-      // console.log("3");
       saveRef.current.focus();
     }
   };
@@ -105,8 +101,6 @@ const Contact = () => {
             <span className="material-icons">done</span>
           </div>
         )}
-
-        {/* <DubbelForm /> */}
 
         <h2>Sign up and become a member</h2>
 

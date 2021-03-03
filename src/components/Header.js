@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Navigation from "./Navigation";
 import { useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import createPersistedState from "use-persisted-state";
+import { useMediaQuery } from "react-responsive"; // Can get all the CSS media query
+import createPersistedState from "use-persisted-state"; // Saves is in localStorage
 import { Redirect } from "react-router-dom";
 
 const useIsDarkState = createPersistedState("isDark");
@@ -20,6 +20,7 @@ const Header = ({ headerText }) => {
   );
   const [isDark, setIsDark] = useIsDarkState(systemPrefersDark);
   const [redirect, setRedirect] = useState(false);
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add(DARK_CLASS);
